@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 import Time from './Time'
 import Partida from './Partida'
@@ -55,9 +56,20 @@ class PlacarContainer extends Component {
                     /> 
                 </div>
                 <div style= {{clear: "both"}}></div>
+                <div>{this.props.climaTempo}</div>
             </div>
         );
     }
+   
 }
 
 export default PlacarContainer;
+
+PlacarContainer.propTypes={
+    climaTempo:PropTypes.string,
+    
+}
+
+PlacarContainer.defaultProps={
+    climaTempo: 'Ensolarado',
+}

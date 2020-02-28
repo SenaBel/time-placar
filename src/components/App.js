@@ -2,6 +2,8 @@ import React from 'react'
 
 import PlacarContainer from './PlacarContainer'
 
+
+
 const dados = {
     partida: {
         estadio: "Itaquerão/SP",
@@ -19,6 +21,8 @@ const dados = {
 export default class App extends React.Component {
     render(){
 
-        return <PlacarContainer {...dados}/> // USANDO O SPREAD OPERATOR
+        return <PlacarContainer {...dados} climaTempo={"Chuvoso"}  /> // USANDO O SPREAD OPERATOR  
+       
+       
     }
 }
